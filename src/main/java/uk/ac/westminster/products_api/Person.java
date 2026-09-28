@@ -33,5 +33,7 @@ public class Person {
     }
 
     // TODO (Activity 3): add the "email" field and its getter here.
+    private String email;
 
+    public String getEmail(String email){return this.email; }
 }
