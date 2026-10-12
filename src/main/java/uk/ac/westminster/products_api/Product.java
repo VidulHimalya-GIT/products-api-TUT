@@ -1,5 +1,7 @@
 package uk.ac.westminster.products_api;
 
+import java.util.List;
+
 public class Product {
 
     private Long id;
@@ -18,6 +20,18 @@ public class Product {
         return id;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -25,4 +39,5 @@ public class Product {
     public double getPrice() {
         return price;
     }
+
 }
