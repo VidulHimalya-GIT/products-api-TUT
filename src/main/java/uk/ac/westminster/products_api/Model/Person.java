@@ -1,4 +1,4 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.Model;
 
 /**
  * Week 1 starter class.
@@ -35,5 +35,5 @@ public class Person {
     // TODO (Activity 3): add the "email" field and its getter here.
     private String email;
 
-    public String getEmail(String email){return this.email; }
+    public String getEmail(){return this.email; }
 }

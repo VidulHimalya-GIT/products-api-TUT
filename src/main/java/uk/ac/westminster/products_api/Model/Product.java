@@ -1,6 +1,4 @@
-package uk.ac.westminster.products_api;
-
-import java.util.List;
+package uk.ac.westminster.products_api.Model;
 
 public class Product {
 

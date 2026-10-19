@@ -1,10 +1,13 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import uk.ac.westminster.products_api.Model.DigitalProduct;
+import uk.ac.westminster.products_api.Model.PhysicalProduct;
+import uk.ac.westminster.products_api.Model.Product;
+import uk.ac.westminster.products_api.Services.ProductService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
@@ -27,6 +30,12 @@ public class ProductController {
     public Product addProduct(@RequestBody Product product){
         return productService.addProduct(product);
     }
+
+    @PostMapping("/addDigitalProduct")
+    public Product addDigitalProduct(@RequestBody DigitalProduct product){return productService.addProduct(product);}
+
+    @PostMapping("/addPhysicalProduct")
+    public Product addPhysicalProduct(@RequestBody PhysicalProduct product){return productService.addProduct(product);}
 
     @DeleteMapping("/deleteProduct/{id}")
     public void deleteProduct(@PathVariable Long id){productService.deleteProduct(id);}

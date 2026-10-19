@@ -1,9 +1,9 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.Services;
 
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import uk.ac.westminster.products_api.Model.DigitalProduct;
+import uk.ac.westminster.products_api.Model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +17,9 @@ public class ProductService {
 
     public List<Product> getAllProducts() {return products;}
 
-    public Product addProduct(Product product){
+    public Product addProduct(Product product) {
         product.setId(nextId++);
         products.add(product);
-
         return product;
     }
 
@@ -39,5 +38,6 @@ public class ProductService {
                 .filter(p -> p.getName().contains(name))
                 .toList();
     }
+
 
 }
